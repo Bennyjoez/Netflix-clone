@@ -6,9 +6,6 @@ html {
     box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
 
 .clear-fix {
     clear: both;
@@ -21,47 +18,58 @@ nav {
     margin-left: 0px 50px;
 }
 
+/*main navbar*/
 ul {
     margin: 0px;
     padding: 0px;
     list-style: none;
 }
 
+/*elements in the main navbar*/
 ul li {
     float: left;
     width: 200px;
     height: 30px;
     background-color: black;
     opacity: 0.8;
+    margin-bottom: 20px;
     line-height: 30px;
     text-align: center;
-    margin: 0px 5px; /*check on this line as you continue*/
+    margin: 0px 2px; 
 }
 
+/* hovering over the main navbar elements */
 ul li:hover {
     background-color: aqua;
     cursor: pointer;
     color: rgb(53, 65, 1);
 }
 
+/* name of the subheadings */
 ul li ul span {
     color: brown;
 
 }
 
+/* subheading sections */
 ul li ul li {
     display: none;
     color: #fff;
 }
+
+
 ul li:hover ul li {
-    display: contents;
+    display: block;
 }
 
-ul li ul li ul li {
+/* display only the subheading titles */
+ul li:hover ul li ul li {
     display: none;
 }
 ul li:hover ul li:hover ul li {
-    display: inline-flex;
+    display: inline-block;
+    justify-content: center;
+    margin-left: 200px;
 }
 
 
@@ -76,7 +84,7 @@ ul li:hover ul li:hover ul li {
     
 }
 
-.container-second-page, .container-last-page {
+.container-second-page, .container-last-page, .movies {
 
     padding: 0px;
     width: 100%;
@@ -180,6 +188,22 @@ div .header img {
     margin-left: auto;
     margin-right: auto;
     border: 1px solid black;
+}
+
+/*setting the class of movies*/
+.movies {
+    /* display: grid;
+    grid-template-columns: repeat(4, 250px);
+    grid-template-rows: repeat(5, 300px); */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*pictures*/
+.posters {
+    height: 300px;
+    width: 200px;
 }
 
 @media (max-width: 500px) {

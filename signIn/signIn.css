@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --default-height: 35px;
+    --primary-color: gray;
+    --primary-red: red;
+}
+
+body {
+    width: 100vw;
+    background: url("https://images.pexels.com/photos/11872650/pexels-photo-11872650.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    color: white;
+}
+
+.container {
+    margin: 20px auto;
+    width: fit-content;
+    height: fit-content;
+    padding: 40px;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 10px;
+}
+
+.container a {
+    text-decoration: none;
+}
+.container a:visited {
+    color: blue;
+}
+.container a:active {
+    color: var(--primary-red);
+}
+.logo {
+    height: 100px;
+}
+
+.form {
+    margin: auto;
+    display: grid;
+    place-items: center;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+}
+
+.form form * {
+    margin-top: 10px;
+    min-width: 150px;
+}
+
+.form form input:not([type="checkbox"]) {
+    height: var(--default-height);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: rgb(48, 47, 47);
+    color: white;
+    padding-left: 20px;
+    font-size: 1rem;
+}
+.form form button {
+    height: var(--default-height);
+    background-color: var(--primary-red);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    font-size: 1.1rem;
+}
+input, button {
+    cursor: pointer;
+}
+.form form .help {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid white; */
+}
+.form form .help input {
+    min-width: 0;
+}
+.form form .help input:checked {
+    background-color: var(--primary-red);
+}
+.form form .help a {
+    text-align: right;
+}
+
+.container .bottom {
+    min-width: 300px;
+    max-width: 400px;
+    margin-top: 50px;
+}
+
+.container .bottom p {
+    color: var(--primary-color);
+}
+
+.container .bottom p:first-child {
+    margin: 0 auto 20px auto;
+    font-size: 1.2rem;
+    display: flex;
+}
+.container .bottom p:first-child span {
+    font-weight: bold;
+}
+.hidden {
+    display: none;
+}
+#learn-more {
+    cursor: pointer;
+    font-weight: bold;
+    color: blue;
+}
+#learn-more:active {
+    color: var(--primary-red);
+}
+#learn-more:hover {
+    font-size: 1.2rem;
+    background-color: rgba(0, 13, 100, 0.2);
+}
+.more {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px;
+}

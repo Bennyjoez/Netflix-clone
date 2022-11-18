@@ -9,7 +9,7 @@ html {
 /*navigation bar*/
 nav {
     color: #fff;
-    opacity: 0.7;
+    opacity: 1;
     margin-left: 0px 50px;
     display: flex;
     flex-direction: row;
@@ -46,7 +46,7 @@ ul li:hover {
     color: rgb(53, 65, 1);
 }
 
-/* name of the subheadings */
+/*sub-subheadings */
 ul li ul span {
     color: rgb(185, 31, 31);
 
@@ -79,9 +79,6 @@ ul li:hover ul li:hover ul li {
 ul li:hover ul li:hover ul {
     margin-top: -30px;
 }
-
-
-
 
 /*check back here to correct the a tags css*/
 .container-first-page {
@@ -117,7 +114,7 @@ div .header {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .buttons:hover {
@@ -126,7 +123,6 @@ div .header {
 
 /*setting the signIn button separately*/
 div .header input {
-    height: 35px; 
     margin-right: 5%;
     align-self : center;
     order: 2
@@ -138,8 +134,6 @@ div .header img {
     order: 1;
     border-radius: 5px;
     height: 60px;
-    margin-top: 15px;
-    margin-left: 5%;
 }
 
 /*first page text content*/
@@ -242,6 +236,32 @@ div .header img {
 }
 
 @media (max-width: 500px) {
+    ul li {
+        float: none;
+    }
+
+    ul li:hover ul li:hover ul li {
+        margin-left: 0;
+        margin-top: 30px;
+        font-size: 0.9em;
+        opacity: 1;
+        color: rgb(212, 108, 11);
+    }
+
+    ul li:hover ul li:hover ul {
+        display: flex;
+        flex-direction: row;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    ul li:hover ul li:hover {
+        margin-bottom: 30px;
+    }
+
+    ul li:not(ul li:first-child, ul li:last-child, ul > li > ul > li):hover {
+        margin-bottom: 90px;
+    }
+
     div .header {
         display: flex;
         padding: 10px;

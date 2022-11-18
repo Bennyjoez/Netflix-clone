@@ -6,11 +6,13 @@ html {
     box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+    max-width: 100vw;
+}
 /*navigation bar*/
 nav {
     color: #fff;
-    opacity: 1;
-    margin-left: 0px 50px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -18,10 +20,18 @@ nav {
 }
 
 /*main navbar*/
+nav > ul {
+    margin: auto;
+    opacity: 0.7;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* margin-right: calc(2vw + 0.1em);
+    margin-left: calc(1vw + 0.1em); */
+}
 ul {
-    margin: 0px;
-    padding: 0px;
     list-style: none;
+    padding-left: 0;
 }
 
 /*elements in the main navbar*/
@@ -36,7 +46,8 @@ ul li {
     font-weight: bold;
     line-height: 30px;
     text-align: center;
-    margin: 0px 2px; 
+    margin: 0.3px 2px; 
+    border-radius: 5px;
 }
 
 /* hovering over the main navbar elements */
@@ -44,12 +55,12 @@ ul li:hover {
     background-color: aqua;
     cursor: pointer;
     color: rgb(53, 65, 1);
+    opacity: 1;
 }
 
 /*sub-subheadings */
 ul li ul span {
     color: rgb(185, 31, 31);
-
 }
 
 /* subheading sections */
@@ -82,37 +93,25 @@ ul li:hover ul li:hover ul {
 
 /*check back here to correct the a tags css*/
 .container-first-page {
-
-    margin: 0;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
     background: url('./images/wallpaper.png');
     background-size: cover;
-    
 }
 
 .container-second-page, .container-last-page {
-
     padding: 0px;
     width: 100%;
     height: 100vh;
     margin: auto;
 }
 
-
-/*netflix logo and signIn button*/
-div .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-
 /*setting the signin button and the get started button*/
 .buttons {
     background-color: red;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 18px;
     border: none;
     border-radius: 5px;
 }
@@ -121,36 +120,67 @@ div .header {
     cursor: pointer;
 }
 
-/*setting the signIn button separately*/
-div .header input {
-    margin-right: 5%;
-    align-self : center;
-    order: 2
+/*netflix logo separately*/
+nav > img, .nav-button {
+    height: 50px;
+    align-self: flex-start;
 }
 
+.nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+}
 
-/*netflix logo separately*/
-div .header img {
-    order: 1;
-    border-radius: 5px;
-    height: 60px;
+.nav-button a{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-button button {
+    font-size: calc(1vw + 0.5em);
+    white-space: nowrap;
 }
 
 /*first page text content*/
 .introduction {
     color: #fff;
+    max-width: 500px;
+    margin: auto;
     text-align: center;
-    margin-top: 200px;
-    font-size: 1.5rem;
+    font-size: calc(1rem + 0.5vw);
 }
 
-.introduction .textbox {
-    height: 30px;
-    width: 15rem;
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    height: 35px;
 }
-.introduction .buttons {
-    height: 30px;
+
+.register {
+    height: 35px;
+    width:fit-content;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
+input {
+    height: 87%;
+    width: 250px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.register button {
+    height: 100%;
+    font-size: 16px;
+    font-weight: 600;
+}
+
 
 
 .divider {
@@ -236,6 +266,9 @@ div .header img {
 }
 
 @media (max-width: 500px) {
+    nav {
+        justify-content: center;
+    }
     ul li {
         float: none;
     }
@@ -248,31 +281,23 @@ div .header img {
         color: rgb(212, 108, 11);
     }
 
+    ul li:hover ul li:hover ul li:not(ul li:hover ul li:hover ul li:first-child) {
+        margin-left: 5px;
+    }
     ul li:hover ul li:hover ul {
         display: flex;
         flex-direction: row;
-        margin-left: -20px;
-        margin-right: -20px;
+        margin-left: -35px;
+        margin-right: -12.5px;
     }
     ul li:hover ul li:hover {
         margin-bottom: 30px;
     }
 
-    ul li:not(ul li:first-child, ul li:last-child, ul > li > ul > li):hover {
+    ul li:nth-child(3):hover {
         margin-bottom: 90px;
     }
-
-    div .header {
-        display: flex;
-        padding: 10px;
-    }
-    .introduction {
-        margin-top: 50%;
-    }
     
-    div .header img{
-        height: 50px;
-    }
     .container-second-page {
         display: flex;
         flex-direction: column;
